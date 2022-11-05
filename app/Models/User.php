@@ -13,14 +13,33 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
+     * Database connection
+     */
+
+    protected $connection = 'wow_auth';
+
+    /**
+     * Table in database.
+     */
+    protected $table = 'account';
+
+    /**
+     * Disable timestamps
+     */
+    public $timestamps = false;
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'username',
         'email',
-        'password',
+        //'password',
+        'salt',
+        'verifier',
+        'expansion'
     ];
 
     /**
@@ -29,8 +48,12 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'password',
-        'remember_token',
+        //'password',
+        //'remember_token',
+        'salt',
+        'verifier',
+        'session_key',
+        'totp_secret'
     ];
 
     /**
@@ -39,6 +62,6 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        //'email_verified_at' => 'datetime',
     ];
 }
