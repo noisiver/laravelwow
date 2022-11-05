@@ -19,6 +19,11 @@ This registration form has several validations on the backend side:
 - Password must not be shorter than 4 characters. Must match password confirmation
 - <img src="https://i.imgur.com/2NHqLM0.png" alt="Username and email must be unique">
 
+## Requirements
+
+- PHP >= 8.0
+- gmp extension
+
 ## Installation
 
 - Step 1. Copy `.env.example` and paste in the same location and then rename to `.env` 
