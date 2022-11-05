@@ -162,6 +162,13 @@ iframe {
     color: #fff!important;
 }
 
+.txt2 {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #5f94ff;
+    font-weight: bold;
+}
+
 .validateError {
     color: #d80000;
     font-weight: 700;
@@ -230,6 +237,13 @@ iframe {
     font-size: 30px;
     color: #fff;
     line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.login100-form-subtitle {
     text-align: center;
     text-transform: uppercase;
     display: block;

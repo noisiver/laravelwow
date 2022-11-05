@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Character;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $totalCharacters = Character::Online()->count();
+
+        view()->share(compact('totalCharacters'));
     }
 }

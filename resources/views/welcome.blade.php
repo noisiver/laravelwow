@@ -12,6 +12,13 @@
                 Create Account
         </h1>
 
+        <div class="login100-form-subtitle">
+            <span class="txt2 p-b-34 p-t-27">
+                 {{ __('Total players online:') }} {{ $totalCharacters }}
+            </span>
+        </div>
+
+
         <div class="wrap-input100 validate-input">
 
             <x-text-input id="name" type="text" name="username" :value="old('username')" placeholder="Username" autofocus />
