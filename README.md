@@ -1,8 +1,8 @@
 <p align="center"><img src="https://i.imgur.com/SffC7kf.png" alt="Screenshot of this mini-project"></p>
 
-## About WoWRegPage
+## About LaravelWoW
 
-Very simple one-page website for your World of Warcraft server on Laravel.
+Very simple website for your World of Warcraft server on Laravel.
 
 - [All features from Laravel](https://github.com/laravel/laravel).
 - Fast, secure and simple.
