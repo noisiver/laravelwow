@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [RegisteredUserController::class, 'create'])->name('home');
-Route::post('/register', [RegisteredUserController::class, 'store'])->name('register_process');
+Route::middleware('guest')->group(function () {
+    Route::get('/', [RegisteredUserController::class, 'create'])->name('home');
+    Route::post('register', [RegisteredUserController::class, 'store'])->name('register_process');
+    Route::get('login', [AuthenticatedSessionController::class, 'create'])->name('login');
+    Route::post('login', [AuthenticatedSessionController::class, 'login']);
+});
