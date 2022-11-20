@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use App\Models\Character;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Contracts\View\View AS ViewContract;
+use View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,8 +26,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $totalCharacters = Character::Online()->count();
+        View::composer('*', function (ViewContract $view) {
+            static $totalCharacters = null;
 
-        view()->share(compact('totalCharacters'));
+            if ($totalCharacters === null) {
+                $totalCharacters = Character::query()
+                    ->online()
+                    ->count();
+            }
+
+            $view->with(compact('totalCharacters'));
+        });
     }
 }
