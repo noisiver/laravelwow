@@ -27,7 +27,7 @@ This registration form has several validations on the backend side:
 ## Installation
 
 - Step 1. Copy `.env.example` and paste in the same location and then rename to `.env` 
-- Step 2. Launch CLI and run the command `php artisan key:generate`
+- Step 2. Launch CLI and run the command `composer install` and `php artisan key:generate`
 - Step 3. Open `config/database.php` and provide your database information in `wow_auth` and `wow_char`. 
 - Step 4. Open `.env` and find `SERVER_REALMLIST`specify the realmlist of your server.
 - Step 5. Go to **[Google Recaptcha Admin](https://www.google.com/recaptcha/admin/create)** and create recaptcha v2 for your domain with checkbox "I'm not a robot". Then specify the secret and client key inside the .env file for `NOCAPTCHA_SECRET` and `NOCAPTCHA_SITEKEY`
