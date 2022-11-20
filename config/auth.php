@@ -15,7 +15,7 @@ return [
 
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'users',
+        'passwords' => 'account',
     ],
 
     /*
@@ -38,7 +38,7 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'accounts',
         ],
     ],
 
@@ -64,7 +64,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-
+        'accounts' => [
+            'driver' => 'eloquent_srp6',
+            'model' => App\Models\User::class,
+        ]
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
