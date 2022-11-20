@@ -26,4 +26,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 });

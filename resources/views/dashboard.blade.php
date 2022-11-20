@@ -23,5 +23,11 @@
                 Last ip: <span class="ml-4 txt2">{{ $user->last_ip }}</span>
             </p>
         </div>
+
+        <div class="container-login100-form-btn mt-2">
+            <a href="{{ route('logout') }}" class="login100-form-btn">
+                {{ __('Logout') }}
+            </a>
+        </div>
     </div>
 </x-app-layout>
