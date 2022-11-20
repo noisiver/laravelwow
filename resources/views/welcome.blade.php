@@ -9,7 +9,7 @@
         @endif
 
         <h1 class="login100-form-title p-b-34 p-t-27">
-                Create Account
+                {{ __('Create Account') }}
         </h1>
 
         <div class="login100-form-subtitle">

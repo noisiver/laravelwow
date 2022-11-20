@@ -21,3 +21,9 @@ Route::middleware('guest')->group(function () {
     Route::get('login', [AuthenticatedSessionController::class, 'create'])->name('login');
     Route::post('login', [AuthenticatedSessionController::class, 'login']);
 });
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
