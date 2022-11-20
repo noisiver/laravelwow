@@ -6,10 +6,22 @@
         @php
             $user = auth()->user();
         @endphp
-        Username: {{ $user->username }} <br>
-        E-mail: {{ $user->email }} <br>
-        Join date: {{ $user->joindate }} <br>
-        Last login: {{ $user->last_login }} <br>
-        Last ip: {{ $user->last_ip }} <br>
+        <div class="container-custom">
+            <p class="text-white">
+                Username: <span class="ml-4 txt2">{{ $user->username }}</span>
+            </p>
+            <p class="text-white">
+                E-mail: <span class="ml-4 txt2">{{ $user->email }}</span>
+            </p>
+            <p class="text-white">
+                Join date: <span class="ml-4 txt2">{{ $user->joindate }}</span>
+            </p>
+            <p class="text-white">
+                Last login: <span class="ml-4 txt2">{{ $user->last_login }}</span>
+            </p>
+            <p class="text-white">
+                Last ip: <span class="ml-4 txt2">{{ $user->last_ip }}</span>
+            </p>
+        </div>
     </div>
 </x-app-layout>
