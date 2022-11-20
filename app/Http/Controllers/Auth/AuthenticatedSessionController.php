@@ -23,7 +23,7 @@ class AuthenticatedSessionController extends Controller
     /**
      * Handle an incoming authentication request.
      *
-     * @param  \App\Http\Requests\LoginRequest  $request
+     * @param  \App\Http\Requests\LoginRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function login(LoginRequest $request)
@@ -40,7 +40,7 @@ class AuthenticatedSessionController extends Controller
     /**
      * Destroy an authenticated session.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy(Request $request)
