@@ -95,5 +95,11 @@
             </a>
         </div>
 
+        <div class="text-center pt-20">
+            <a href="{{ route('login') }}" class="txt2">
+                {{ __('I have an account') }}
+            </a>
+        </div>
+
     </form>
 </x-app-layout>

@@ -18,6 +18,12 @@
             {{ __('Login form') }}
         </h1>
 
+        <div class="login100-form-subtitle">
+            <span class="txt2 p-b-34 p-t-27">
+                 {{ __('Total players online:') }} {{ $totalCharacters }}
+            </span>
+        </div>
+
         <!-- Username Address -->
         <div class="wrap-input100 validate-input">
 
@@ -50,6 +56,12 @@
             <x-primary-button class="login100-form-btn">
                 {{ __('Login') }}
             </x-primary-button>
+        </div>
+
+        <div class="text-center pt-20">
+            <a href="{{ route('home') }}" class="txt2">
+                {{ __('I don\'t have an account') }}
+            </a>
         </div>
 
     </form>
