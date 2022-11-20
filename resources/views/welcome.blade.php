@@ -1,4 +1,12 @@
 <x-app-layout>
+    <x-slot:title>
+        {{ __('Main page') }}
+    </x-slot>
+
+   <x-slot:description>
+         {{ __('Main page description') }}
+   </x-slot>
+
     <form class="login100-form validate-form" method="POST" action="{{ route('register_process') }}">
         @csrf
 

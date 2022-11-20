@@ -1,4 +1,12 @@
 <x-app-layout>
+    <x-slot:title>
+        {{ __('Personal area page') }}
+    </x-slot>
+
+    <x-slot:description>
+        {{ __('Personal area page description') }}
+    </x-slot>
+
     <div class="login100-form validate-form txt1">
         <h1 class="login100-form-title p-b-34 p-t-27">
             {{ __('Personal area') }}

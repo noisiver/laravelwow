@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Your WoW Server description...">
-    <title>World of Warcraft Registration Page</title>
+    <meta name="description" content="{{ $description }}">
+    <title>{{ $title }}</title>
 
     <link rel="icon" type="image/png" href="{{ asset('images/icons/favicon.ico') }}">
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
